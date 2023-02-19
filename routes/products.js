@@ -87,10 +87,12 @@ router.delete('/:id', (req, res) => {
     Product.findByIdAndRemove(req.params.id)
         .then((product) => {
             if (product) {
-                return res.status(200).json({
-                    success: true,
-                    message: 'the product is deleted!',
-                });
+                return res
+                    .status(200)
+                    .json({
+                        success: true,
+                        message: 'the product is deleted!',
+                    });
             } else {
                 return res
                     .status(404)

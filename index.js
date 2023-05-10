@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(morgan('tiny'));
 // app.use(authJwt());
 app.use(errorHandler);
-
+// check restrictions
 //Routes
 const categoriesRoutes = require('./routes/categories');
 const productsRoutes = require('./routes/products');
